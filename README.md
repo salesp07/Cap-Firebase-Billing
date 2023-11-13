@@ -47,7 +47,7 @@ I highly recommend you see the video for this part, as there are a lot of steps 
 
 3. Install required dependencies by running `npm install discord-api-types @google-cloud/billing` from your command line.
 
-4. Copy the files from `/functions/src` in this repository and paste it into your `functions` directory.
+4. Copy the files from `/functions/src` in this repository and paste it into your `/functions/src` directory.
 
 5. Do any necessary code refactoring if you're using JavaScript or if you already Cloud Functions set up.
 
