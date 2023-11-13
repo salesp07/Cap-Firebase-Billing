@@ -9,7 +9,7 @@ But keep the following [Google Cloud warning](https://cloud.google.com/billing/d
 > **Warning**: This example removes Cloud Billing from your project, shutting down all resources. Resources might not shut down gracefully, and might be irretrievably deleted. There is no graceful recovery if you disable Cloud Billing.
 > You can re-enable Cloud Billing, but there is no guarantee of service recovery and manual configuration is required.
 
-Full video walkthrough: https://youtu.be/dQw4w9WgXcQ?si=hVr3EmgNYne9VOZW
+Full video walkthrough: https://youtu.be/T8SGJa6ZYCs
 
 ## Step 1: Enable Billing on your Firebase Project
 
@@ -23,7 +23,7 @@ You can't cap your costs if you don't already have billing enabled. So, go to yo
 
 3. Click on _Create Budget_.
 
-4. You can name whatever you want, but I recommend naming it something like _Firebase Cost Cap_.
+4. You can name whatever you want, but I recommend naming it something like `<your-project-name> CAP`.
 
 5. Set the budget amount to whatever you want your cap to be.
 
@@ -45,7 +45,7 @@ I highly recommend you see the video for this part, as there are a lot of steps 
 
 3. Install required dependencies by running `npm install discord-api-types @google-cloud/billing` from your command line.
 
-4. Copy the files from `cap-billing-backend/functions` in this repository and paste it into your `functions` directory.
+4. Copy the files from `/functions/src` in this repository and paste it into your `functions` directory.
 
 5. Do any necessary code refactoring if you're using JavaScript or if you already Cloud Functions set up.
 
@@ -65,9 +65,9 @@ To avoid this, we'll keep track of previous billing alerts in a Realtime Databas
 
 3. Create a node called `billing` and add the following 2 children to it:
 
-```json
-lastReportedCost: 0
-lastReportedBillingStart: ""
+```js
+lastReportedCost: 0;
+lastReportedBillingStart: "";
 ```
 
 5. Make sure your billing node's read and write rules are set to false. This information is sensitive, and you don't want the public to be able to read or write to it. Your Cloud Function will be able to read and write to it regardless of the rules, as it has admin privileges.
@@ -112,7 +112,7 @@ We can test our Cloud Function by manually publishing a message to our billing P
 
 3. Copy the following JSON ([Reference](https://cloud.google.com/billing/docs/how-to/notify#test-your-cloud-function)) template and paste it into the _Message body_ field:
 
-```json
+```js
 {
   "budgetDisplayName": "name-of-budget",
   "alertThresholdExceeded": 1.0,
