@@ -1,3 +1,5 @@
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=salesp07.Cap-Firebase-Billing" />
+
 # Cap-Firebase-Billing
 
 Capping costs on Firebase can be tricky. The Firebase team doesn't want to make cost capping simpler and more reliable, as they see the scalability of Firebase as its greatest strength, and would rather forgive huge accidental bills. However, it's never certain that they'll forgive your bill, and it's better to be safe than sorry.
