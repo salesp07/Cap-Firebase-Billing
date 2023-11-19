@@ -11,7 +11,7 @@ But keep the following [Google Cloud warning](https://cloud.google.com/billing/d
 > **Warning**: This example removes Cloud Billing from your project, shutting down all resources. Resources might not shut down gracefully, and might be irretrievably deleted. There is no graceful recovery if you disable Cloud Billing.
 > You can re-enable Cloud Billing, but there is no guarantee of service recovery and manual configuration is required.
 
-Full video walkthrough: https://youtu.be/T8SGJa6ZYCs
+Full video walkthrough: https://youtu.be/XaMzLvIAFHI
 
 ## Step 1: Enable Billing on your Firebase Project
 
